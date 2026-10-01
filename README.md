@@ -1,17 +1,22 @@
-# Aplicación de Consola - Fundamentos de JavaScript (Módulo 4)
+Aplicación de Consola en JavaScript
+Módulo 3: Fundamentos de programación en JavaScript — Alkemy
 
-## Descripción del Proyecto
-Aplicación desarrollada en JavaScript vanilla que se ejecuta directamente en la consola del navegador. Funciona como un sistema básico de gestión de inventario interactivo, incorporando operaciones matemáticas, estructuras de control, funciones reutilizables, arreglos y objetos.
+1. Resumen del Proyecto
+Desarrollo de un programa interactivo ejecutado en la consola del navegador web que resuelve operaciones matemáticas básicas y gestiona datos aplicando los conceptos clave de JavaScript (ES6+): funciones modulares, estructuras condicionales, ciclos de repetición, arreglos y objetos.
 
-## Funcionalidades Principales
-1. **Calculadora Básica:** Realiza operaciones de suma, resta, multiplicación y división mediante funciones independientes y modularizadas.
-2. **Gestión de Inventario:** Almacena productos utilizando un **arreglo de objetos**.
-3. **Control de Stock y Filtrado:** Utiliza el método `.filter()` para aislar productos con existencias críticas.
-4. **Interactividad:** Emplea `prompt()`, `alert()` y `console.log()` para la comunicación fluida con el usuario.
+2. Requerimientos Cumplidos
+Entorno y Entrada/Salida: Funciona en la consola del navegador mediante interacción por prompt() para ingresar datos y respuestas formateadas con console.log() y alert().
 
-## Requisitos Técnicos Implementados
-- Uso de variables con `let` y `const`.
-- Estructuras condicionales (`if`, `else`, `switch`).
-- Estructuras de repetición (`while`).
-- Modularización mediante funciones con parámetros y retornos.
-- Manipulación de arreglos y objetos avanzados con métodos como `.forEach()` y `.filter()`.
+Funciones y Modularización: Operaciones matemáticas (suma, resta, multiplicación y división) encapsuladas en funciones independientes con paso de parámetros y retorno de resultados.
+
+Control de Flujo:
+
+switch e if/else para la navegación del menú y la validación de entradas numéricas (previniendo divisiones por cero o valores NaN).
+
+while para mantener el menú interactivo activo hasta que el usuario elija salir.
+
+Arreglos y Objetos:
+
+Cada cálculo se almacena como un objeto con sus metadatos (operación, valores ingresados y resultado).
+
+Los registros se guardan en un arreglo global y se recorren mediante métodos como forEach() para generar reportes en consola.
