@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #0f172a;        /* Fondo azul noche muy oscuro */
+  --card-bg: #1e293b;         /* Superficie de tarjeta */
+  --card-border: #334155;     /* Borde sutil */
+  --text-primary: #f8fafc;    /* Texto principal blanco suave */
+  --text-secondary: #94a3b8;  /* Texto secundario gris claro */
+  --accent-cyan: #38bdf8;     /* Acento cian para títulos y links */
+  --accent-green: #34d399;    /* Verde esmeralda terminal */
+  --kbd-bg: #090d16;          /* Fondo teclas */
+  --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(52, 211, 153, 0.08) 0%, transparent 50%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Tarjeta contenedora con efecto terminal */
+body > * {
+  max-width: 600px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* Envolvemos visualmente el contenido del body */
+body {
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h1::before {
+  content: ">_";
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+p {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+/* Resaltado del atajo de teclado */
+p::after {
+  content: "Tip: También puedes presionar Option + Cmd + J en macOS";
+  display: block;
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--card-border);
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  font-family: 'Fira Code', monospace;
+}
